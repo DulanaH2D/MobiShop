@@ -1,15 +1,13 @@
 package com.nvision.mobishop.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.nvision.mobishop.R;
 import com.nvision.mobishop.adapters.ProductRecyclerViewAdapter;
@@ -27,7 +25,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         productRecyclerView = view.findViewById(R.id.product_recycler);
 
         // Manually create the array list
@@ -42,7 +40,6 @@ public class HomeFragment extends Fragment {
         products.add(new Product("Basmati Rice", "Rathna", "1000", "https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_640.png", false));
         products.add(new Product("Basmati Rice", "Rathna", "1000", "https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_640.png", false));
         products.add(new Product("Basmati Rice", "Rathna", "1000", "https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_640.png", false));
-
 
 
         // initiate the recycle view adapter
@@ -60,7 +57,6 @@ public class HomeFragment extends Fragment {
     public void deleteSelectedItems() {
         adapter.deleteSelectedItems();
     }
-
 
     // select all
     public void selectAllItems() {

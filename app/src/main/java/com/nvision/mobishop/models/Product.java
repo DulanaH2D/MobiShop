@@ -1,12 +1,11 @@
 package com.nvision.mobishop.models;
 
 public class Product {
-    private String pName;
-    private String pBrand;
-    private String pPrice;
-    private String imageUrl;
+    private final String pName;
+    private final String pBrand;
+    private final String pPrice;
+    private final String imageUrl;
     private boolean isSelected = false;
-
 
 
     public Product(String pName, String pBrand, String pPrice, String imageUrl, boolean isSelected) {
@@ -21,32 +20,16 @@ public class Product {
         return pName;
     }
 
-    public void setpName(String pName) {
-        this.pName = pName;
-    }
-
     public String getpBrand() {
         return pBrand;
-    }
-
-    public void setpBrand(String pBrand) {
-        this.pBrand = pBrand;
     }
 
     public String getpPrice() {
         return pPrice;
     }
 
-    public void setpPrice(String pPrice) {
-        this.pPrice = pPrice;
-    }
-
     public String getImageUrl() {
         return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     @Override

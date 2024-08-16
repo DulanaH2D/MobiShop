@@ -24,12 +24,11 @@ public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecy
 
     private ArrayList<Product> products = new ArrayList<>();
 
-    private Context context;
+    private final Context context;
 
     private boolean multiSelectMode = false;
 
     ArrayList<Product> selectedItemList = new ArrayList<>();
-
 
 
     public ProductRecyclerViewAdapter(Context context) {
@@ -99,13 +98,15 @@ public class ProductRecyclerViewAdapter extends RecyclerView.Adapter<ProductRecy
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView productName, productBrand, productPrice;
-        private ImageView productImage;
+        private final TextView productName;
+        private final TextView productBrand;
+        private final TextView productPrice;
+        private final ImageView productImage;
         // Init the product list item
-        private CardView productListItem;
-        private Drawable defaultBackground;
+        private final CardView productListItem;
+        private final Drawable defaultBackground;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
